@@ -26,12 +26,12 @@ const createWindow = () => {
   require('@electron/remote/main').initialize()
   require("@electron/remote/main").enable(win.webContents)
 
-  win.setIgnoreMouseEvents(true) // 过滤鼠标操作
+  // win.setIgnoreMouseEvents(true) // 过滤鼠标操作
   win.setSkipTaskbar(true) // 取消任务栏显示
 
   win.loadFile('index.html')
 
-  // win.webContents.openDevTools()
+  win.webContents.openDevTools()
 }
 
 
